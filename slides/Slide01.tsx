@@ -19,7 +19,7 @@ export const Slide01: React.FC = () => {
           <p className="text-lg lg:text-xl text-[#dfe6f2] max-w-xl">
             Nova identidade com animações suaves, contraste sofisticado e narrativa que apresenta a casa de forma humana, segura e clara.
           </p>
-          <div className="flex fhttps://github.com/Lawalash/apresentacao/pull/2/conflict?name=slides%252FSlide01.tsx&ancestor_oid=ce81913049a5e862339c9427cbb435c17d239b54&base_oid=5bbd27f7da9c1fb003ee0e750dc84bab1d99e8d1&head_oid=48cb87964da7eab5f9b0bddcbe51c2680a60fbeblex-wrap gap-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href="#"
               className="bg-white text-[#043959] px-6 py-3 rounded-full font-semibold shadow-lg hover:-translate-y-0.5 transition transform button-glow"
