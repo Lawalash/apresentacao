@@ -1,0 +1,135 @@
+.slide02__content {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  height: 100%;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .slide02__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.slide02__headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.1rem, 2.8vw, 2.8rem);
+  font-weight: 700;
+  color: #043959;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.slide02__text {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.7;
+  max-width: 48rem;
+}
+
+.slide02__cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+@media (min-width: 640px) {
+  .slide02__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.slide02__card {
+  border-radius: 1.25rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.slide02__badge {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(142, 163, 191, 0.25);
+  color: #043959;
+  flex-shrink: 0;
+}
+
+.slide02__badge--alt {
+  background: rgba(70, 111, 166, 0.2);
+}
+
+.slide02__card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #043959;
+}
+
+.slide02__card-text {
+  color: #475569;
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+.slide02__metrics {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  color: #043959;
+  padding-top: 0.5rem;
+}
+
+.slide02__metric-label {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.slide02__metric-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.slide02__image-wrapper {
+  position: relative;
+  height: 70%;
+  min-height: 18rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(4, 57, 89, 0.3);
+}
+
+.slide02__image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(70, 111, 166, 0.25), rgba(142, 163, 191, 0.25));
+  z-index: 1;
+}
+
+.slide02__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide02__image-label {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  padding: 0.35rem 0.9rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #043959;
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(4, 57, 89, 0.18);
+}
