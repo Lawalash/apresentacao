@@ -35,8 +35,11 @@ const App: React.FC = () => {
   const CurrentSlideComponent = slides[currentSlide];
 
   return (
-    <main className="relative w-full h-screen flex flex-col items-center justify-center bg-gray-50 overflow-hidden p-4">
-      <div className="aspect-video w-full max-w-6xl bg-white shadow-2xl rounded-lg overflow-hidden transition-all duration-500">
+    <main className="relative w-full h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 overflow-hidden p-4 text-slate-100">
+      <div className="absolute inset-0 opacity-40 brand-surface animate-gradient" aria-hidden></div>
+      <div className="absolute -left-24 top-10 w-72 h-72 bg-emerald-500/30 rounded-full blur-[160px]" aria-hidden></div>
+      <div className="absolute right-0 bottom-10 w-96 h-96 bg-sky-500/25 rounded-full blur-[180px]" aria-hidden></div>
+      <div className="relative aspect-video w-full max-w-6xl shadow-[0_30px_80px_rgba(0,0,0,0.35)] rounded-3xl overflow-hidden transition-all duration-500">
         <CurrentSlideComponent />
       </div>
       
