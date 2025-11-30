@@ -1,0 +1,302 @@
+.slide04__grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .slide04__grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.slide04__main {
+  grid-column: span 12;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .slide04__main {
+    grid-column: span 7;
+  }
+}
+
+.slide04__header {
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(142, 163, 191, 0.4);
+  box-shadow: 0 24px 70px rgba(4, 57, 89, 0.2);
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+
+@media (min-width: 1024px) {
+  .slide04__header {
+    padding: 2rem 2.5rem;
+  }
+}
+
+.slide04__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #466fa6;
+}
+
+.slide04__title {
+  margin-top: 0.35rem;
+  font-size: clamp(2rem, 2.8vw, 2.4rem);
+  font-weight: 800;
+  color: #043959;
+}
+
+.slide04__text {
+  margin-top: 0.65rem;
+  color: #334155;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.slide04__totals {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .slide04__totals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.slide04__total-card {
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  color: #fff;
+  background: linear-gradient(135deg, #043959, #466fa6, #8ea3bf);
+  box-shadow: 0 16px 40px rgba(4, 57, 89, 0.25);
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.slide04__total-card p {
+  margin: 0.1rem 0;
+}
+
+.slide04__total-card .slide04__value {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.slide04__installments {
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(142, 163, 191, 0.5);
+  box-shadow: 0 10px 30px rgba(4, 57, 89, 0.15);
+}
+
+.slide04__installments-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #466fa6;
+}
+
+.slide04__installments-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #043959;
+  margin-top: 0.2rem;
+}
+
+.slide04__installments-text {
+  color: #475569;
+  margin-top: 0.2rem;
+}
+
+.slide04__costs {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .slide04__costs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.slide04__cost-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(142, 163, 191, 0.4);
+  box-shadow: 0 16px 40px rgba(4, 57, 89, 0.18);
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide04__cost-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(4, 57, 89, 0.24);
+}
+
+.slide04__cost-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(70, 111, 166, 0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slide04__cost-card:hover::before {
+  opacity: 1;
+}
+
+.slide04__cost-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f9fb;
+  color: #043959;
+  font-weight: 800;
+  border: 1px solid rgba(142, 163, 191, 0.5);
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.slide04__cost-title {
+  color: #043959;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0.2rem 0;
+}
+
+.slide04__cost-text {
+  color: #475569;
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.slide04__cost-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: #e8eef7;
+  color: #466fa6;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.slide04__sidebar {
+  grid-column: span 12;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .slide04__sidebar {
+    grid-column: span 5;
+  }
+}
+
+.slide04__card {
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(142, 163, 191, 0.4);
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(4, 57, 89, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.slide04__card-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #466fa6;
+}
+
+.slide04__maintenance {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.slide04__maintenance-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: #f7f9fb;
+  border-radius: 1rem;
+  border: 1px solid rgba(142, 163, 191, 0.3);
+  box-shadow: 0 8px 24px rgba(4, 57, 89, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.slide04__maintenance-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(4, 57, 89, 0.14);
+}
+
+.slide04__flow {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: #fff;
+  background: linear-gradient(90deg, #466fa6, #8ea3bf);
+  box-shadow: 0 22px 60px rgba(4, 57, 89, 0.3);
+}
+
+.slide04__flow::before {
+  content: '';
+  position: absolute;
+  right: 1.5rem;
+  top: -2rem;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: floatSoft 7s ease-in-out infinite;
+}
+
+.slide04__flow-text {
+  margin: 0.6rem 0 1rem;
+  line-height: 1.6;
+}
+
+.slide04__flow-tags {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 640px) {
+  .slide04__flow-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.slide04__flow-tag {
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
