@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Slide01, Slide02, Slide03, Slide04, Slide05 } from './slides';
 
@@ -37,6 +36,7 @@ const App: React.FC = () => {
       <div className="absolute inset-0 opacity-50 brand-surface animate-gradient" aria-hidden></div>
       <div className="absolute -left-24 top-10 w-72 h-72 bg-[#466fa6]/35 rounded-full blur-[160px]" aria-hidden></div>
       <div className="absolute right-0 bottom-10 w-96 h-96 bg-[#8ea3bf]/30 rounded-full blur-[180px]" aria-hidden></div>
+
       <div className="relative aspect-video w-full max-w-6xl shadow-[0_30px_80px_rgba(4,57,89,0.45)] rounded-3xl overflow-hidden transition-all duration-500">
         <CurrentSlideComponent />
       </div>
@@ -50,9 +50,10 @@ const App: React.FC = () => {
         >
           <i className="fas fa-arrow-left"></i>
         </button>
-        <span className="text-slate-600 font-medium text-lg">
-          {currentSlide + 1} / {slides.length}
-        </span>
+            <span className="text-black font-medium text-lg">
+        {currentSlide + 1} / {slides.length}
+      </span>
+
         <button
           onClick={nextSlide}
           disabled={currentSlide === slides.length - 1}
@@ -62,12 +63,12 @@ const App: React.FC = () => {
         </button>
       </div>
 
-       {/* Progress Bar */}
-       <div className="absolute top-0 left-0 w-full h-1.5 bg-gray-200">
-        <div 
-          className="h-1.5 bg-blue-500 transition-all duration-300 ease-in-out" 
+      {/* Progress Bar - cores ILPI */}
+      <div className="absolute top-0 left-0 w-full h-1.5 bg-[#f8ecd1]/70">
+        <div
+          className="h-1.5 bg-gradient-to-r from-[#F2D06B] via-[#BF8C2C] to-[#8C5C03] transition-all duration-300 ease-in-out"
           style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
-        ></div>
+        />
       </div>
     </main>
   );

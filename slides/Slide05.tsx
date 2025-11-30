@@ -1,46 +1,61 @@
 import React from 'react';
-import { SlideLayout } from '../components/SlideLayout';
-import { WhatsAppIcon } from '../components/icons';
 import './Slide05.css';
 
 export const Slide05: React.FC = () => {
   return (
-    <SlideLayout title="Obrigado!">
-      <div className="slide05__grid">
-        <div className="glass-card slide05__card animate-fade-up">
-          <div className="slide05__header">
-            <div className="slide05__icon">🤝</div>
-            <div>
-              <p className="slide05__eyebrow">Seguimos juntos</p>
-              <p className="slide05__title">Prontos para colocar o site no ar</p>
+    <section className="slide05">
+      {/* Elementos decorativos de fundo */}
+      <div className="slide05__bg-container">
+        <div className="slide05__bg-orb slide05__bg-orb--1" />
+        <div className="slide05__bg-orb slide05__bg-orb--2" />
+        <div className="slide05__bg-orb slide05__bg-orb--3" />
+      </div>
+
+      {/* Grid pattern suave */}
+      <div className="slide05__grid-pattern" />
+
+      {/* Ícones flutuantes decorativos */}
+      <div className="slide05__floating-icons">
+        <div className="slide05__icon">✨</div>
+        <div className="slide05__icon">💎</div>
+        <div className="slide05__icon">🚀</div>
+        <div className="slide05__icon">⚡</div>
+      </div>
+
+      {/* Container principal */}
+      <div className="slide05__container">
+        <div className="slide05__wrapper">
+          
+          {/* OBRIGADO - Elemento principal */}
+          <div className="slide05__thanks">
+            <h1 className="slide05__thanks-text"> Muito Obrigado!</h1>
+          </div>
+
+          {/* Frase de efeito */}
+          <div className="slide05__tagline">
+            <p className="slide05__tagline-text">
+              Transformando <span className="slide05__tagline-highlight">dados em decisões</span> e <span className="slide05__tagline-highlight">tecnologia em resultados</span> para pequenas e médias empresas.
+            </p>
+          </div>
+
+          {/* Cards de detalhes opcionais */}
+          <div className="slide05__details">
+            <div className="slide05__detail-item">
+              <p className="slide05__detail-label">Nossa missão</p>
+              <p className="slide05__detail-value">Eficiência real</p>
+            </div>
+            <div className="slide05__detail-item">
+              <p className="slide05__detail-label">Nosso diferencial</p>
+              <p className="slide05__detail-value">Soluções sob medida</p>
+            </div>
+            <div className="slide05__detail-item">
+              <p className="slide05__detail-label">Nosso compromisso</p>
+              <p className="slide05__detail-value">Resultados práticos</p>
             </div>
           </div>
-          <p className="slide05__text">
-            A A2 Data agradece a confiança. Vamos criar uma presença digital que represente todo o carinho da ILPI Aconchego dos Avós.
-          </p>
-          <div className="slide05__bullets">
-            {["Entrega guiada e suportada.", "Monitoramento pós-lançamento.", "Ajustes rápidos conforme feedback.", "Equipe acessível em canais diretos."].map((item) => (
-              <div key={item} className="slide05__bullet">
-                <i className="fas fa-sparkles text-[#466fa6]"></i>
-                <span className="text-left text-slate-700">{item}</span>
-              </div>
-            ))}
-          </div>
-          <div className="slide05__actions">
-            <button className="slide05__cta button-glow">
-              <WhatsAppIcon /> Conversar agora
-            </button>
-            <button className="slide05__secondary">Ver cronograma</button>
-          </div>
-        </div>
-        <div className="slide05__panel animate-fade-up animate-delay-1">
-          <div className="slide05__panel-content">
-            <p className="slide05__panel-tag">Até breve</p>
-            <h3 className="slide05__panel-title">Prontos para encantar famílias online</h3>
-            <p className="slide05__panel-text">Design dinâmico, tecnologia estável e mensuração contínua para gerar confiança desde o primeiro clique.</p>
-          </div>
+
         </div>
       </div>
-    </SlideLayout>
+    </section>
   );
 };
